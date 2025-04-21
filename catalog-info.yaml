@@ -1,0 +1,31 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: person-service
+  title: Person Service
+  description: Person Service
+  tags:
+    - java
+    - container-app
+spec:
+  type: service
+  owner: team-person
+  lifecycle: experimental
+  dependsOn:
+    - resource:default/azure-lz-2
+    - resource:default/database-person
+---
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: database-person
+  title: Person Database
+  description: Database for Person
+  tags:
+    - postgres
+spec:
+  type: database
+  owner: team-person
+  lifecycle: experimental
+  dependsOn:
+    - resource:default/azure-lz-2
