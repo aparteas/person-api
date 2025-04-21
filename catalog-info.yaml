@@ -11,6 +11,8 @@ spec:
   type: service
   owner: team-person
   lifecycle: experimental
+  providesApis:
+    - person-api
   dependsOn:
     - resource:default/azure-lz-2
     - resource:default/database-person
