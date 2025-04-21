@@ -18,6 +18,32 @@ spec:
     - resource:default/database-person
 ---
 apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: person-api
+  title: Person API
+  description: Person API
+  tags:
+    - REST
+spec:
+  type: openapi
+  owner: team-person
+  lifecycle: experimental
+  definition: |
+    openapi: "3.0.0"
+    info:
+      version: 1.0.0
+      title: Artist API
+      license:
+        name: MIT
+    servers:
+      - url: http://artist.spotify.net/v1
+    paths:
+      /artists:
+        get:
+          summary: List all artists
+---
+apiVersion: backstage.io/v1alpha1
 kind: Resource
 metadata:
   name: database-person
