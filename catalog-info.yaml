@@ -24,7 +24,7 @@ metadata:
   title: Person API
   description: Person API
   tags:
-    - REST
+    - rest
 spec:
   type: openapi
   owner: team-person
