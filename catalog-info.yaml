@@ -14,8 +14,9 @@ spec:
   providesApis:
     - person-api
   dependsOn:
-    - resource:default/azure-lz-2
-    - resource:default/database-person
+    - person-web
+    - azure-lz-2
+    - resource:database-person
 ---
 apiVersion: backstage.io/v1alpha1
 kind: API
