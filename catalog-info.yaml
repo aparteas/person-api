@@ -14,7 +14,6 @@ spec:
   providesApis:
     - person-api
   dependsOn:
-    - component:person-web
     - resource:azure-lz-2
     - resource:database-person
 ---
@@ -57,4 +56,4 @@ spec:
   owner: team-person
   lifecycle: experimental
   dependsOn:
-    - resource:default/azure-lz-2
+    - resource:azure-lz-2
